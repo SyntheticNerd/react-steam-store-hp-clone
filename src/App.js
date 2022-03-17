@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { StyleVariables } from "./components/styledComponents";
+import { HomePage } from "./components/styledComponents";
+import Navbar from "./components/nav/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <StyleVariables>
+      <HomePage>
+        <Navbar />
+      </HomePage>
+    </StyleVariables>
   );
 }
 
