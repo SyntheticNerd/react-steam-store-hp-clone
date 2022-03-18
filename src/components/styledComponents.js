@@ -5,6 +5,7 @@ export const StyleVariables = styled.div`
     --bg-header: rgb(23, 26, 33);
     --bg-dark: rgb(9, 19, 28);
     --bg-green: rgb(76, 107, 34);
+    --bg-capcom: rgb(11, 71, 149);
     --bg-time-left: rgb(79, 149, 189);
     --bg-search: rgb(49, 98, 130);
     --bg-tag: rgb(56, 64, 71);
@@ -16,7 +17,19 @@ export const StyleVariables = styled.div`
     --bg-grad-2: linear-gradient(180deg, rgb(70, 95, 119) 0%, rgb(27, 40, 56) 100%);
     --bg-grad-3: linear-gradient(90deg, rgb(49, 80, 109) 0%, rgb(64, 120, 152) 100%);
     --bg-grad-btn: linear-gradient(90deg, rgb(6, 190, 255) 0%, rgb(45, 115, 255) 100%);
-    --font-color: rgb(116, 187, 248);
+    --font-color-blue: rgb(116, 187, 248);
+    --font-color-prim: rgba(255, 255, 255, 0.88);
 `;
 
-export const HomePage = styled.div``;
+export const HomePage = styled.div`
+    background-color: var(--bg-main);
+    min-height: 100vh;
+`;
+export const HeroCont = styled.div`
+    background-color: var(--bg-capcom);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+`;

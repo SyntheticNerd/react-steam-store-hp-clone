@@ -7,31 +7,43 @@ import {
   NavCont,
   NavLinks,
   NavUtil,
-  Line
+  Line,
+  NavBox
 } from "./navStyles";
 
 export default function Navbar() {
   return (
     <NavCont>
-      <Logo></Logo>
-      <NavLinks>
-        <Link>STORE</Link>
-        <Link>COMMUNITY</Link>
-        <Link>ABOUT</Link>
-        <Link>SUPPORT</Link>
-      </NavLinks>
-      <NavUtil>
-        <InstallBtn>
-          <img />
-          <p>Install Steam</p>
-        </InstallBtn>
-        <Anchor>login</Anchor>
-        <Line />
-        <Language>
-          language
-          <img />
-        </Language>
-      </NavUtil>
+      <NavBox>
+        <Logo
+          src={process.env.PUBLIC_URL + "/images/main_steam_logo.svg"}
+          alt='STEAM'
+        />
+        <NavLinks>
+          <Link>STORE</Link>
+          <Link>COMMUNITY</Link>
+          <Link>ABOUT</Link>
+          <Link>SUPPORT</Link>
+        </NavLinks>
+        <NavUtil>
+          <InstallBtn>
+            <img
+              src={process.env.PUBLIC_URL + "/images/download.png"}
+              alt='download'
+            />
+            <p>Install Steam</p>
+          </InstallBtn>
+          <Anchor>login</Anchor>
+          <Line />
+          <Language>
+            language
+            <img
+              src={process.env.PUBLIC_URL + "/images/btn_arrow_down_padded.png"}
+              alt='expand'
+            />
+          </Language>
+        </NavUtil>
+      </NavBox>
     </NavCont>
   );
 }
