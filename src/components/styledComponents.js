@@ -84,8 +84,8 @@ export const PageTracker = styled.div`
 `;
 
 export const SectionTitle = styled.h1`
-  width: 940px;
-  max-width: 80%;
+  width: 90%;
+  max-width: 940px;
   margin: auto;
   font-size: 15px;
   color: var(--font-color-prim);

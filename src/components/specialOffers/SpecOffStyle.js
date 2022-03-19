@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { InfoSection } from "../recomended/RecStyles";
 
 export const OffersCont = styled.div``;
 export const GridBox = styled.div`
@@ -35,8 +34,7 @@ export const InfoLg = styled.div`
   z-index: 1;
   color: var(--font-color-prim);
   padding: 16px;
-  background: url(${process.env.PUBLIC_URL +
-  "/images/background_spotlight.png"});
+  background: url(${process.env.PUBLIC_URL + "/images/background_spotlight.png"});
   & > div {
     display: flex;
   }
