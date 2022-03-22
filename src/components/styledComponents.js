@@ -22,7 +22,7 @@ export const StyleVariables = styled.div`
   --bg-grad-2: linear-gradient(
     180deg,
     rgb(70, 95, 119) 0%,
-    rgb(27, 40, 56) 100%
+    rgb(27, 40, 56) 85%
   );
   --bg-grad-3: linear-gradient(
     90deg,
@@ -36,8 +36,8 @@ export const StyleVariables = styled.div`
   );
   --bg-btn-grad: linear-gradient(90deg, #131d28 0%, rgba(19, 27, 40, 0) 100%);
   --font-color-blue: rgb(116, 187, 248);
-  --font-color-blue2: #ACDBF5;
-  --font-color-green: #A4D007;
+  --font-color-blue2: #acdbf5;
+  --font-color-green: #a4d007;
   --font-color-prim: rgba(255, 255, 255, 0.88);
   --font-color-sec: rgba(0, 0, 0, 0.6);
   --shadow-prim: 0px 4px 8px rgba(0, 0, 0, 0.5);
@@ -45,8 +45,11 @@ export const StyleVariables = styled.div`
 `;
 
 export const HomePage = styled.div`
+  font-family: "Roboto", sans-serif;
   background-color: var(--bg-main);
-  min-height: 100vh;
+  height: fit-content;
+  min-height: fit-content;
+  padding-bottom: 64px;
 `;
 export const HeroCont = styled.div`
   background-color: var(--bg-capcom);
@@ -74,6 +77,7 @@ export const PageTracker = styled.div`
   display: flex;
   width: fit-content;
   margin: auto;
+  margin-bottom: 32px;
   & > div {
     width: fit-content;
     margin: 16px 4px;
@@ -92,11 +96,34 @@ export const SectionTitle = styled.h1`
   font-weight: 400;
   margin-bottom: 16px;
 `;
-
-export const Banner = styled.div`
-  margin:  40px auto;
-  width: fit-content;
-  height: 150px;
-  box-shadow: var(--shadow-prim);
+export const SectionTitleLg = styled.h1`
+  width: 90%;
+  max-width: 940px;
+  margin: auto;
+  font-size: 30px;
+  color: var(--font-color-prim);
+  font-weight: 400;
 `;
 
+export const Banner = styled.div`
+  margin: 0px auto 40px auto;
+  width: 940px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  & > img {
+    box-shadow: var(--shadow-prim);
+  }
+`;
+
+export const BrowseBtn = styled.button`
+  width: 24%;
+  height: 58px;
+  background: var(--bg-grad-btn);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  color: var(--font-color-prim);
+  font-size: 16px;
+  font-weight: 600;
+`;

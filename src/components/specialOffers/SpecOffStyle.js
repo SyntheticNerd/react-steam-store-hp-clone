@@ -51,11 +51,13 @@ export const InfoSm = styled.div`
   height: fit-content;
   width: 100%;
   margin-top: auto;
+  margin-bottom: 2px;
   z-index: 1;
   color: var(--font-color-prim);
-  padding: 5px;
+  padding: 0px 5px; 
   display: flex;
   justify-self: flex-end;
+  align-items: center;
   & > div {
     & > h1 {
       font-size: 12px;
@@ -77,13 +79,13 @@ export const PrevDisc = styled.div`
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.15);
-  padding: 0px 8px;
+  padding: 4px 8px;
   font-weight: 600;
   font-size: 24px;
   color: var(--font-color-sec);
 `;
 export const Disc = styled.div`
-  padding: 0px 8px;
+  padding: 4px 8px;
   display: flex;
   align-items: center;
   background-color: var(--bg-green);

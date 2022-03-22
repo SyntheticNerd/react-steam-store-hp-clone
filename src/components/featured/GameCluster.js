@@ -1,4 +1,4 @@
-import { PriceSml, Available, Cluster, ClusterCont, GameTitle, ImgLg, ImgSml, InfoSection, Tag } from "./RecStyles";
+import { PriceSml, Available, Cluster, ClusterCont, GameTitle, ImgLg, ImgSml, InfoSection, Tag } from "./FeatStyles";
 
 export default function GameCluster() {
   return (

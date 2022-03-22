@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const RecCont = styled.div`
+export const FeatCont = styled.div`
   margin-top: 24px;
 `;
 export const ClusterCont = styled.div`
