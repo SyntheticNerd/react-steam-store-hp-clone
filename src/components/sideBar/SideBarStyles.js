@@ -25,4 +25,8 @@ export const SideLink = styled.p`
     color: var(--font-color-blue2);
     font-size: 12px;
     margin: 4px;
+    cursor: pointer;
+    &:hover{
+        color: white;
+    }
 `;

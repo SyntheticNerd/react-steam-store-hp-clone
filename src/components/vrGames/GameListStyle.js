@@ -16,6 +16,9 @@ export const GameBtn = styled.button`
     & > img{
         position: absolute;
     }
+    &:hover{
+        background: rgb(64, 120, 152) 100%;
+    }
 `;
 
 export const PriceTagSm = styled.b`

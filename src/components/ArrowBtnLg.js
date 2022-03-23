@@ -1,9 +1,9 @@
 import { ArrowBtnCont } from "./StyledComponents";
 
-export default function ArrowBtnLg({ direction }) {
+export default function ArrowBtnLg({ direction, onClick }) {
   let arrowDir = direction === "right" ? { transform: "rotate(180deg)" } : {};
   return (
-    <ArrowBtnCont style={arrowDir}>
+    <ArrowBtnCont style={arrowDir} onClick={onClick}>
       <svg
         width='8'
         height='13'

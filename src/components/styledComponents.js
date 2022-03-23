@@ -31,14 +31,16 @@ export const StyleVariables = styled.div`
   );
   --bg-grad-btn: linear-gradient(
     90deg,
-    rgb(6, 190, 255) 0%,
+    rgb(0, 255, 255) 0%,
     rgb(45, 115, 255) 100%
   );
   --bg-btn-grad: linear-gradient(90deg, #131d28 0%, rgba(19, 27, 40, 0) 100%);
+  --bg-btn-grad-hover: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 90%);
   --font-color-blue: rgb(116, 187, 248);
   --font-color-blue2: #acdbf5;
   --font-color-green: #a4d007;
   --font-color-prim: rgba(255, 255, 255, 0.88);
+  --font-color-dis: rgba(255, 255, 255, 0.6);
   --font-color-sec: rgba(0, 0, 0, 0.6);
   --shadow-prim: 0px 4px 8px rgba(0, 0, 0, 0.5);
   --shadow-2: 0px 2px 4px rgba(0, 0, 0, 0.6);
@@ -64,6 +66,9 @@ export const ArrowBtnCont = styled.button`
   width: 50px;
   background: var(--bg-btn-grad);
   border: none;
+  &:hover{
+    background: var(--bg-btn-grad-hover);
+  }
 `;
 
 export const PaginatorCont = styled.div`
@@ -82,7 +87,7 @@ export const PageTracker = styled.div`
     width: fit-content;
     margin: 16px 4px;
     padding: 4px 8px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255);
     border-radius: 2px;
   }
 `;
@@ -95,6 +100,18 @@ export const SectionTitle = styled.h1`
   color: var(--font-color-prim);
   font-weight: 400;
   margin-bottom: 16px;
+  & > button {
+    float: right;
+    background: none;
+    padding: 4px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    color: var(--font-color-prim);
+    font-size: 12px;
+    &:hover{
+      border: 1px solid rgba(255, 255, 255, 0.88);
+    }
+  }
 `;
 export const SectionTitleLg = styled.h1`
   width: 90%;
@@ -112,7 +129,10 @@ export const Banner = styled.div`
   display: flex;
   justify-content: space-between;
   & > img {
-    box-shadow: var(--shadow-prim);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    &:hover{
+      box-shadow: 0px 0px 12px var(--font-color-blue);
+    }
   }
 `;
 
@@ -126,4 +146,8 @@ export const BrowseBtn = styled.button`
   color: var(--font-color-prim);
   font-size: 16px;
   font-weight: 600;
+  opacity: 90%;
+  &:hover{
+    opacity: 1;
+  }
 `;

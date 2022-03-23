@@ -8,7 +8,7 @@ import {
   NavLinks,
   NavUtil,
   Line,
-  NavBox
+  NavBox,
 } from "./navStyles";
 
 export default function Navbar() {
@@ -20,10 +20,34 @@ export default function Navbar() {
           alt='STEAM'
         />
         <NavLinks>
-          <Link>STORE</Link>
-          <Link>COMMUNITY</Link>
-          <Link>ABOUT</Link>
-          <Link>SUPPORT</Link>
+          <Link>
+            <p>STORE</p>
+            <ul>
+              <li><span>HOME</span></li>
+              <li><span>DISCOVERY QUEUE</span></li>
+              <li><span>WISHLIST</span></li>
+              <li><span>POINTS SHOP</span></li>
+              <li><span>NEWS</span></li>
+              <li><span>STATS</span></li>
+            </ul>
+          </Link>
+          <Link>
+            <p>COMMUNITY</p>
+            <ul>
+              <li><span>HOME</span></li>
+              <li><span>DISCUSSION</span></li>
+              <li><span>WORKSHOP</span></li>
+              <li><span>MARKET</span></li>
+              <li><span>BROADCASTS</span></li>
+              <li><span>STATS</span></li>
+            </ul>
+          </Link>
+          <Link>
+            <p>ABOUT</p>
+          </Link>
+          <Link>
+            <p>SUPPORT</p>
+          </Link>
         </NavLinks>
         <NavUtil>
           <InstallBtn>

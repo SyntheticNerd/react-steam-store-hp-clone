@@ -14,6 +14,7 @@ export const ClusterCont = styled.div`
 `;
 export const ImgLg = styled.img`
   z-index: 1;
+  width: 616px;
 `;
 export const InfoSection = styled.section`
   height: 100%;
@@ -47,6 +48,10 @@ export const ImgSml = styled.img`
   object-fit: cover;
   opacity: 50%;
   box-shadow: var(--shadow-2);
+  transition: all 0.2;
+  &:hover {
+    opacity: 1;
+  }
 `;
 export const Tag = styled.p`
   color: var(--font-color-prim);
@@ -58,9 +63,17 @@ export const Tag = styled.p`
   text-align: center;
   border-radius: 4px;
 `;
+export const TagList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
 
 export const PriceSml = styled.strong`
   margin: auto 0px 16px 16px;
   color: var(--font-color-blue);
   font-size: 12px;
+  & > img{
+    opacity: 0.7;
+    float: right;
+  }
 `;

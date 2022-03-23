@@ -52,9 +52,19 @@ export const Disc = styled.div`
 export const Price = styled.div`
   text-align: right;
   font-size: 10px;
-  padding: 2px 16px;
+  padding: 4px 16px;
   background-color: rgba(0, 0, 0, 0.7);
   color: var(--font-color-blue2);
+  & > p {
+    position: relative;
+    &::before {
+      content: "";
+      width: 80%;
+      position: absolute;
+      border-bottom: 1px solid var(--font-color-blue2);
+      top: 50%;
+    }
+  }
   & > strong {
     font-size: 12px;
     font-weight: 700;

@@ -8,23 +8,66 @@ import {
   SpotLightLgCont,
 } from "./SpecOffStyle";
 
-export default function SpotLightLg({ image, live }) {
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+function padMin(int) {
+  if (int <= 9) {
+    return ("0" + int).slice(-2);
+  } else return int;
+}
+
+export default function SpotLightLg({ game }) {
   return (
     <SpotLightLgCont>
-      {live && (
+      {game.specOff && (
         <LiveIcon
           src={process.env.PUBLIC_URL + "/images/live_icon.svg"}
           alt='LIVE'
         />
       )}
-      <img src={process.env.PUBLIC_URL + image} alt={image} />
+      <img
+        src={process.env.PUBLIC_URL + game.spotLightLg}
+        alt={game.spotLightLg}
+      />
       <InfoLg>
-        <h1>TITLE SECTION</h1>
-        <p>Offer Ends Date</p>
+        <h1>MIDWEEK MADNESS</h1>
+        {game.offEnds && (
+          <p>
+            Offer ends {months[game.offEnds.getMonth()]}{" "}
+            {game.offEnds.getDate()} @ {game.offEnds.getHours() % 12}:
+            {padMin(game.offEnds.getMinutes())}
+            {game.offEnds.getHours() >= 12 ? "pm" : "am"}
+          </p>
+        )}
+
         <div>
-          <PrevDisc><p>-00%</p></PrevDisc>
-          <Disc><p>-00%</p></Disc>
-          <Price><p>$00.00</p><strong>$00.00</strong></Price>
+          {game.prevDisc && (
+            <PrevDisc>
+              <p>-{game.prevDisc}%</p>
+            </PrevDisc>
+          )}
+          {game.disc && (
+            <Disc>
+              <p>-{game.disc}%</p>
+            </Disc>
+          )}
+          <Price>
+            <p>${game.price}</p>
+            <strong>${(game.price * (game.disc/100)).toFixed(2) -.01}</strong>
+          </Price>
         </div>
       </InfoLg>
     </SpotLightLgCont>

@@ -41,10 +41,11 @@ export const InfoLg = styled.div`
   & > h1 {
     font-size: 14px;
     font-weight: 600;
+    margin-bottom: 12px;
   }
   & > p {
     font-size: 12px;
-    margin: 12px 0px;
+    margin-bottom: 12px;
   }
 `;
 export const InfoSm = styled.div`
@@ -54,15 +55,16 @@ export const InfoSm = styled.div`
   margin-bottom: 2px;
   z-index: 1;
   color: var(--font-color-prim);
-  padding: 0px 5px; 
+  padding: 0px 5px;
   display: flex;
   justify-self: flex-end;
   align-items: center;
   & > div {
     & > h1 {
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 400;
       color: var(--font-color-sec);
+      padding-bottom: 4px;
     }
   }
   & > section {
@@ -76,6 +78,7 @@ export const LiveIcon = styled.img`
   margin: 8px 16px;
 `;
 export const PrevDisc = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.15);
@@ -83,6 +86,13 @@ export const PrevDisc = styled.div`
   font-weight: 600;
   font-size: 24px;
   color: var(--font-color-sec);
+  /* text-decoration:line-through; */
+  &::before {
+      content: "";
+      width: 80%;
+      position: absolute;
+      border-bottom: 2px solid var(--font-color-sec);
+    }
 `;
 export const Disc = styled.div`
   padding: 4px 8px;
@@ -96,9 +106,19 @@ export const Disc = styled.div`
 export const Price = styled.div`
   text-align: right;
   font-size: 10px;
-  padding: 2px 16px;
+  padding: 6px 16px;
   background-color: var(--bg-price-dark);
   color: var(--font-color-blue2);
+  & > p {
+    position: relative;
+    &::before {
+      content: "";
+      width: 80%;
+      position: absolute;
+      border-bottom: 1px solid var(--font-color-blue2);
+      top: 50%;
+    }
+  }
   & > strong {
     font-size: 12px;
     font-weight: 700;
@@ -110,4 +130,5 @@ export const TimeLeft = styled.p`
   font-size: 10px;
   color: var(--font-color-blue2);
   padding: 0px 2px;
+  width: fit-content;
 `;
