@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SyntheticDesigner/react-steam-store-hp-clone/static/css/main.9f088a99.css",
+    "main.js": "/SyntheticDesigner/react-steam-store-hp-clone/static/js/main.6312ef78.js",
+    "static/js/787.d71e8ea9.chunk.js": "/SyntheticDesigner/react-steam-store-hp-clone/static/js/787.d71e8ea9.chunk.js",
+    "index.html": "/SyntheticDesigner/react-steam-store-hp-clone/index.html",
+    "main.9f088a99.css.map": "/SyntheticDesigner/react-steam-store-hp-clone/static/css/main.9f088a99.css.map",
+    "main.6312ef78.js.map": "/SyntheticDesigner/react-steam-store-hp-clone/static/js/main.6312ef78.js.map",
+    "787.d71e8ea9.chunk.js.map": "/SyntheticDesigner/react-steam-store-hp-clone/static/js/787.d71e8ea9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f088a99.css",
+    "static/js/main.6312ef78.js"
+  ]
+}
